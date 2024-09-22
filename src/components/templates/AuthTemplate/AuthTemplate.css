@@ -1,0 +1,13 @@
+.auth-template {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.auth-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    border-top: 2px solid #e1e1e1;
+}
