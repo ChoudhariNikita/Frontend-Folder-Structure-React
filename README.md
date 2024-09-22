@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+## Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project serves as an educational resource for understanding an ideal frontend folder structure and various frontend concepts in React. The structure is designed to enhance maintainability, scalability, and clarity of the codebase.
 
-Currently, two official plugins are available:
+## Folder Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project is organized into the following folders:
 
-## Expanding the ESLint configuration
+- **assets**: Contains static files like images, fonts, and icons that are used throughout the application.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **components**: Includes reusable UI components, structured into smaller subfolders based on their type (e.g., atoms, molecules, organisms).
 
-- Configure the top-level `parserOptions` property like this:
+- **constants**: Houses constant values used across the application, such as API URLs, text placeholders, and configuration settings.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **pages**: Contains the main pages of the application, representing different routes and views.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **plugins**: Includes third-party libraries or plugins that enhance functionality.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **routes**: Manages the application’s routing configuration, defining how different URLs correspond to components.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **services**: Contains functions for handling API calls and business logic, abstracting data-fetching operations.
+
+- **store**: Manages the state of the application, typically using state management libraries like Redux or Context API.
+
+- **tests**: Contains test files for components and services, ensuring that the application behaves as expected.
+
+- **types**: Holds TypeScript interfaces and types used throughout the project to enforce type safety.
+
+- **utils**: Contains utility functions that provide common functionality, helping to keep the code DRY (Don't Repeat Yourself).
+
+## Technologies Used
+
+- **React**: The core library for building user interfaces.
+- **TypeScript**: For type safety and improved developer experience.
+- **React Router**: For handling routing and navigation within the application.
+- **Fetch API**: For making HTTP requests to backend services.
+- **CSS Modules**: For styling components locally.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate into the project directory:
+   ```bash
+   cd <project-name>
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+Now you can view the project in your browser at `http://localhost:3000`.
+
+## Conclusion
+
+This project aims to provide a clear understanding of frontend folder structures and best practices in React development. Feel free to explore the code, make changes, and learn!
