@@ -1,4 +1,4 @@
-import ButtonProps from "../../../types/interfaces";
+import {ButtonProps} from "../../../types/interfaces/index";
 
 import './Button.css';
 
